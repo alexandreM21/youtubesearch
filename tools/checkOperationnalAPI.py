@@ -8,7 +8,7 @@ videoIds = []
 
 def getVideos(pageToken = '', callsIndex = 0):
     global videoIds
-    url = f'https://youtubesearch-indol.vercel.app//search?part=id&q={query}&type=video'
+    url = f'https://youtubesearch-indol.vercel.app/search?part=id&q={query}&type=video'
     if pageToken != '':
         url += '&pageToken=' + pageToken
     data = requests.get(url).json()
